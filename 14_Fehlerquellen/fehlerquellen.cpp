@@ -15,6 +15,6 @@ int main() {
     std::cout << "- keine uninitialisierten Variablen\n";
     std::cout << "- keine Division durch 0\n";
     std::cout << "- keine ungueltigen Indizes\n";
-
+    
     return 0;
 }

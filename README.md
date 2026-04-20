@@ -2,39 +2,33 @@
 
 Ein strukturiertes, anfaengerfreundliches C++-Lernprojekt mit Erklaerungen, kommentierten Beispielen, Uebungen und Loesungen.
 
-Dieses Repository ist fuer Menschen gedacht, die C++ nicht nur "irgendwie zum Laufen" bringen wollen, sondern die Grundlagen wirklich verstehen moechten.
+Dieses Repository hilft dir dabei, C++ nicht nur nachzuschreiben, sondern die Grundlagen wirklich zu verstehen. Statt einer losen Sammlung von Dateien bekommst du hier einen klaren Lernpfad mit Dokumentation, Beispielcode und passenden Uebungen.
 
-## Warum dieses Repository?
+## Was dieses Repository besonders macht
 
-Viele C++-Sammlungen bestehen aus losem Code ohne klare Lernstruktur. Dieses Projekt verfolgt bewusst einen anderen Ansatz:
-
-- klare Themenordner statt unstrukturierter Einzeldateien
-- ausfuehrliche Dokumentationen
-- kommentierte Beispielprogramme
+- strukturierte Themenordner statt chaotischer Einzeldateien
+- ausfuehrliche Dokumentationen in jedem Themenbereich
+- kommentierte Beispielprogramme zum direkten Nachvollziehen
 - Uebungen mit separaten Loesungen
-- Fokus auf Verstaendnis statt nur auf fertige Syntax
+- deutschsprachige Erklaerungen mit Fokus auf Verstaendnis
 
-Wenn du C++ Schritt fuer Schritt lernen oder wiederholen willst, ist dieses Repository als Lernpfad aufgebaut.
-
-## Fuer wen ist das gedacht?
-
-Dieses Projekt ist besonders geeignet fuer:
+## Fuer wen dieses Projekt gedacht ist
 
 - Einsteiger in C++
 - Studierende und Schueler
 - Menschen, die Programmiergrundlagen systematisch wiederholen wollen
-- alle, die Themen wie Pointer, Referenzen, OOP und Speicher besser verstehen wollen
+- alle, die Themen wie Pointer, Referenzen, Speicher und OOP besser verstehen moechten
 
 ## Lernstruktur
 
-Jedes Thema hat dieselbe Grundstruktur:
+Jeder Themenordner folgt derselben Struktur:
 
 - `DOKUMENTATION.md`
 - eine kommentierte Beispiel-`.cpp`
 - `uebungen/AUFGABEN.md`
 - `uebungen/LOESUNGEN.cpp`
 
-Dadurch ist das Projekt leicht zu durchsuchen und eignet sich gut als persoenliches Nachschlagewerk.
+Dadurch kannst du neue Themen schnell verstehen und spaeter gezielt wiederfinden.
 
 ## Themenuebersicht
 
@@ -63,7 +57,7 @@ Dadurch ist das Projekt leicht zu durchsuchen und eignet sich gut als persoenlic
 
 ## Empfohlene Lernreihenfolge
 
-Wenn du noch relativ am Anfang stehst, empfehle ich diese Reihenfolge:
+Wenn du noch relativ am Anfang stehst, ist diese Reihenfolge sinnvoll:
 
 1. Variablen und Datentypen
 2. Operatoren und Ausdruecke
@@ -94,25 +88,51 @@ Wenn du noch relativ am Anfang stehst, empfehle ich diese Reihenfolge:
    `- LOESUNGEN.cpp
 ```
 
-## Projektziel
+## Warum das auch auf GitHub gut funktioniert
 
-Dieses Repository soll zu einer hochwertigen, deutschsprachigen C++-Lernsammlung wachsen, die:
+Dieses Repository ist so aufgebaut, dass es nicht nur lokal angenehm ist, sondern auch auf GitHub stark wirkt:
 
-- auf GitHub gut lesbar ist
-- auf einer GitHub-Pages-Seite schoen dargestellt werden kann
-- fuer Suchanfragen wie "C++ lernen", "C++ basics", "Pointer erklaert" und "C++ Uebungen" hilfreich ist
+- klare Navigation durch nummerierte Themenordner
+- gute Lesbarkeit im README
+- eine eigene Projektseite ueber GitHub Pages
+- social-preview-faehige `docs`-Seite
+- gut passende Topics fuer GitHub-Suche
 
 ## GitHub Pages
 
 Eine begleitende Projektseite findest du im Ordner [`docs`](./docs).
 
-Wenn du GitHub Pages aktivierst und als Quelle den `docs`-Ordner waehlst, kannst du daraus direkt eine oeffentliche Projektseite machen.
+Wenn du GitHub Pages aktivierst und als Quelle den `docs`-Ordner aus dem Branch `main` auswaehlst, kannst du daraus direkt eine oeffentliche Projektseite machen.
 
-## Repository-Metadaten
+Wichtige Dateien:
 
-Eine empfohlene Kurzbeschreibung, Topics und Positionierung fuer GitHub findest du in:
+- [docs/index.html](./docs/index.html)
+- [docs/styles.css](./docs/styles.css)
+- [docs/social-preview.svg](./docs/social-preview.svg)
+- [docs/SETUP.md](./docs/SETUP.md)
+
+## Repo-Description, Topics und Discoverability
+
+Die empfohlene GitHub-Repo-Beschreibung, Topic-Vorschlaege und Positionierung findest du in:
 
 - [REPO_METADATA.md](./REPO_METADATA.md)
+
+## Social Preview
+
+Ein passendes Social-Preview-Asset fuer GitHub und GitHub Pages liegt bereits hier:
+
+- [docs/social-preview.svg](./docs/social-preview.svg)
+
+Das kannst du in GitHub unter `Settings -> General -> Social preview` hochladen.
+
+## Projektziel
+
+Dieses Repository soll zu einer hochwertigen, deutschsprachigen C++-Lernsammlung wachsen, die:
+
+- auf GitHub gut lesbar ist
+- ueber GitHub Pages ansprechend praesentiert wird
+- fuer Suchanfragen wie `C++ lernen`, `C++ basics`, `Pointer erklaert` und `C++ Uebungen` hilfreich ist
+- fuer Anfaenger echten Mehrwert bietet
 
 ## Mitmachen
 
@@ -122,8 +142,8 @@ Wenn du das Projekt verbessern willst, sind diese Beitraege besonders wertvoll:
 - neue Uebungen
 - Fehlerkorrekturen
 - modernere C++-Beispiele
-- mehr Beispiele zu schwierigen Themen wie Speicher, Referenzen, OOP und Pointer
+- mehr Inhalte zu Speicher, Referenzen, OOP und Pointern
 
 ## Lizenz
 
-Wenn du das Repository oeffentlich machst, lohnt es sich, als naechsten Schritt noch eine passende Lizenzdatei hinzuzufuegen, zum Beispiel `MIT`.
+Das Projekt steht unter der [MIT-Lizenz](./LICENSE).
