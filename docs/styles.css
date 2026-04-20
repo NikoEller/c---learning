@@ -224,7 +224,8 @@ h1 {
 .topic-card,
 .code-card,
 .cta-box,
-.path-step {
+.path-step,
+.link-tile {
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: 20px;
@@ -388,6 +389,47 @@ pre {
   background: linear-gradient(135deg, rgba(255, 250, 242, 0.95), rgba(255, 255, 255, 0.88));
 }
 
+.closing-grid {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 18px;
+  align-items: start;
+}
+
+.closing-copy p {
+  margin-top: 0;
+}
+
+.closing-links {
+  display: grid;
+  gap: 14px;
+}
+
+.link-tile {
+  display: block;
+  text-decoration: none;
+  padding: 18px 20px;
+  background: var(--surface-strong);
+  transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.link-tile:hover {
+  transform: translateY(-2px);
+  border-color: rgba(199, 99, 47, 0.35);
+  box-shadow: 0 16px 28px rgba(141, 63, 30, 0.12);
+}
+
+.link-tile strong {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 1.05rem;
+}
+
+.link-tile span {
+  color: var(--muted);
+  line-height: 1.6;
+}
+
 .site-footer {
   padding: 0 20px 30px;
 }
@@ -414,7 +456,8 @@ pre {
 
 @media (max-width: 980px) {
   .hero-inner,
-  .structure-layout {
+  .structure-layout,
+  .closing-grid {
     grid-template-columns: 1fr;
   }
 
