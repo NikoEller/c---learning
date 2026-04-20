@@ -67,7 +67,30 @@ Beispiele:
 
 Das ist sinnvoll, wenn die restlichen Pruefungen ohne diese Bedingung keinen Sinn mehr machen.
 
-## Einfaches Beispiel
+Beispiel:
+
+```cpp
+ASSERT_NE(pointer, nullptr);
+EXPECT_EQ(*pointer, 42);
+```
+
+### Exceptions und Gleitkommazahlen testen
+
+GoogleTest kann nicht nur einfache Ganzzahlen vergleichen. Sehr haeufig braucht
+man auch:
+
+- `EXPECT_THROW(...)` fuer erwartete Exceptions
+- `EXPECT_NO_THROW(...)` wenn etwas ohne Fehler laufen soll
+- `EXPECT_DOUBLE_EQ(...)` fuer `double`-Werte
+
+Beispiele:
+
+```cpp
+EXPECT_THROW(divide(10, 0), std::invalid_argument);
+EXPECT_DOUBLE_EQ(average(values), 5.0);
+```
+
+## Beispiel mit mehreren Tests
 
 ```cpp
 TEST(CalculatorTest, AddsPositiveNumbers) {
@@ -77,7 +100,33 @@ TEST(CalculatorTest, AddsPositiveNumbers) {
 TEST(CalculatorTest, HandlesNegativeNumbers) {
     EXPECT_EQ(add(-2, -3), -5);
 }
+
+TEST(CalculatorTest, RecognizesEvenNumbers) {
+    EXPECT_TRUE(is_even(8));
+    EXPECT_FALSE(is_even(7));
+}
 ```
+
+## Test Fixtures mit `TEST_F`
+
+Wenn mehrere Tests dieselbe gemeinsame Vorbereitung brauchen, verwendet man oft eine Fixture:
+
+```cpp
+class CalculatorFixture : public ::testing::Test {
+protected:
+    int base = 10;
+};
+
+TEST_F(CalculatorFixture, UsesSharedValue) {
+    EXPECT_EQ(base + 5, 15);
+}
+```
+
+Das ist besonders hilfreich, wenn:
+
+- dieselben Objekte mehrfach gebraucht werden
+- Tests einen gemeinsamen Startzustand haben sollen
+- mehrere Tests mit denselben Beispieldaten arbeiten
 
 ## Typische Projektstruktur
 
@@ -123,6 +172,14 @@ Am einfachsten funktioniert es so:
 5. Lasse konfigurieren und bauen.
 6. Fuehre die Tests ueber CMake Tools oder `ctest` aus.
 
+## Typischer Konsolenablauf mit CMake
+
+```bash
+cmake -S 25_Unit_Tests_mit_GoogleTest -B 25_Unit_Tests_mit_GoogleTest/build
+cmake --build 25_Unit_Tests_mit_GoogleTest/build
+ctest --test-dir 25_Unit_Tests_mit_GoogleTest/build --output-on-failure
+```
+
 ## Wichtige Dateien in diesem Themenordner
 
 - `CMakeLists.txt`: beschreibt das Build- und Test-Setup
@@ -139,6 +196,7 @@ Mit diesem Themenordner lernst du nicht nur "wie schreibe ich einen Test", sonde
 - wie Header und Implementierung getrennt werden
 - wie CMake Tests einbindet
 - wie Test-Executables aufgebaut sind
+- wie Erwartungen und Assertions unterschiedlich wirken
 
 ## Merksatz
 

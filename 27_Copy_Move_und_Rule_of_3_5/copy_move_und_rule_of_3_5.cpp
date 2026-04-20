@@ -1,69 +1,118 @@
+#include <algorithm>
+#include <cstddef>
 #include <iostream>
+#include <stdexcept>
+#include <string>
+#include <utility>
 
-class Buffer {
+class IntBuffer {
 public:
-    explicit Buffer(int v) : value(new int(v)) {
-        std::cout << "Konstruktor: " << *value << '\n';
+    IntBuffer(std::size_t new_size, int initial_value)
+        : size(new_size), data(new int[new_size]) {
+        std::fill(data, data + size, initial_value);
+        std::cout << "Konstruktor: Buffer mit " << size << " Elementen erzeugt.\n";
     }
 
-    ~Buffer() {
-        std::cout << "Destruktor\n";
-        delete value;
+    ~IntBuffer() {
+        std::cout << "Destruktor: Buffer wird freigegeben.\n";
+        delete[] data;
     }
 
-    Buffer(const Buffer& other) : value(new int(*other.value)) {
-        std::cout << "Copy-Konstruktor\n";
+    IntBuffer(const IntBuffer& other)
+        : size(other.size), data(new int[other.size]) {
+        std::copy(other.data, other.data + size, data);
+        std::cout << "Copy-Konstruktor: tiefe Kopie erstellt.\n";
     }
 
-    Buffer& operator=(const Buffer& other) {
-        std::cout << "Copy-Assignment\n";
+    IntBuffer& operator=(const IntBuffer& other) {
+        std::cout << "Copy-Assignment: vorhandenen Buffer ueberschreiben.\n";
+
         if (this != &other) {
-            *value = *other.value;
+            int* new_data = new int[other.size];
+            std::copy(other.data, other.data + other.size, new_data);
+
+            delete[] data;
+            data = new_data;
+            size = other.size;
         }
+
         return *this;
     }
 
-    Buffer(Buffer&& other) noexcept : value(other.value) {
-        std::cout << "Move-Konstruktor\n";
-        other.value = nullptr;
+    IntBuffer(IntBuffer&& other) noexcept
+        : size(other.size), data(other.data) {
+        std::cout << "Move-Konstruktor: Besitz wird uebernommen.\n";
+        other.size = 0;
+        other.data = nullptr;
     }
 
-    Buffer& operator=(Buffer&& other) noexcept {
-        std::cout << "Move-Assignment\n";
+    IntBuffer& operator=(IntBuffer&& other) noexcept {
+        std::cout << "Move-Assignment: Besitz wird uebertragen.\n";
+
         if (this != &other) {
-            delete value;
-            value = other.value;
-            other.value = nullptr;
+            delete[] data;
+            size = other.size;
+            data = other.data;
+
+            other.size = 0;
+            other.data = nullptr;
         }
+
         return *this;
     }
 
-    void print() const {
-        if (value != nullptr) {
-            std::cout << "Wert: " << *value << '\n';
-        } else {
-            std::cout << "Kein Wert mehr vorhanden.\n";
+    void set(std::size_t index, int value) {
+        if (index >= size) {
+            throw std::out_of_range("Index ausserhalb des Buffers.");
         }
+
+        data[index] = value;
+    }
+
+    void print(const std::string& label) const {
+        std::cout << label << ": ";
+
+        if (data == nullptr) {
+            std::cout << "(kein Besitz mehr)\n";
+            return;
+        }
+
+        for (std::size_t index = 0; index < size; ++index) {
+            std::cout << data[index] << ' ';
+        }
+        std::cout << '\n';
     }
 
 private:
-    int* value;
+    std::size_t size;
+    int* data;
 };
 
-Buffer createBuffer() {
-    Buffer temp(99);
+IntBuffer create_buffer() {
+    IntBuffer temp(3, 7);
+    temp.set(1, 42);
     return temp;
 }
 
 int main() {
-    std::cout << "=== Copy ===\n";
-    Buffer first(10);
-    Buffer second = first;
-    second.print();
+    std::cout << "=== Tiefe Kopie ===\n";
+    IntBuffer original(4, 1);
+    original.set(2, 99);
+    IntBuffer copied = original;
+    copied.set(0, 500);
 
-    std::cout << "\n=== Move ===\n";
-    Buffer third = createBuffer();
-    third.print();
+    original.print("Original");
+    copied.print("Kopie");
+
+    std::cout << "\n=== Move-Konstruktor ===\n";
+    IntBuffer moved_from_function = create_buffer();
+    moved_from_function.print("Aus Funktion erhalten");
+
+    std::cout << "\n=== Move-Assignment ===\n";
+    IntBuffer receiver(2, -1);
+    receiver = std::move(moved_from_function);
+    receiver.print("Receiver nach move");
+    moved_from_function.print("Quelle nach move");
 
     return 0;
 }

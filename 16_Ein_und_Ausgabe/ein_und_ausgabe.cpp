@@ -1,4 +1,5 @@
 #include <iostream>
+#include <sstream>
 #include <string>
 
 int main() {
@@ -16,6 +17,16 @@ int main() {
     // std::cout << "Wie heisst du? ";
     // std::getline(std::cin, inputName);
     // std::cout << "Hallo, " << inputName << "!\n";
+
+    // Mit einem Stringstream kann man Eingabe ohne echte Benutzereingabe zeigen.
+    std::istringstream simulatedInput("42 Berlin");
+    int luckyNumber = 0;
+    std::string city;
+    simulatedInput >> luckyNumber >> city;
+
+    std::cout << "Simulierte Eingabe:\n";
+    std::cout << "Glueckszahl: " << luckyNumber << '\n';
+    std::cout << "Stadt: " << city << '\n';
 
     std::cout << "Das Beispiel zeigt die Grundidee von Ein- und Ausgabe.\n";
     return 0;

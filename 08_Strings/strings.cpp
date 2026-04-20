@@ -18,5 +18,22 @@ int main() {
     std::cout << std::boolalpha;
     std::cout << "Ist der Name gleich 'Niko Eller'? " << (fullName == "Niko Eller") << '\n';
 
+    // Teilstring bilden.
+    std::string firstWord = fullName.substr(0, 4);
+    std::cout << "Erstes Wort per substr: " << firstWord << '\n';
+
+    // Text durchsuchen.
+    std::size_t position = fullName.find("Eller");
+    if (position != std::string::npos) {
+        std::cout << "'Eller' gefunden an Position: " << position << '\n';
+    }
+
+    // Zeichen einzeln durchlaufen.
+    std::cout << "Buchstaben im Vornamen: ";
+    for (char letter : firstName) {
+        std::cout << letter << ' ';
+    }
+    std::cout << '\n';
+
     return 0;
 }

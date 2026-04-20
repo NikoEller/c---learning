@@ -3,31 +3,54 @@
 #include <set>
 #include <string>
 #include <unordered_map>
+#include <unordered_set>
+#include <vector>
 
 int main() {
     std::cout << "=== std::map ===\n";
-    std::map<std::string, int> ages;
-    ages["Anna"] = 20;
-    ages["Ben"] = 25;
-    ages["Clara"] = 22;
+    std::map<std::string, int> scores;
 
-    for (const auto& entry : ages) {
-        std::cout << entry.first << ": " << entry.second << '\n';
+    // operator[] legt neue Eintraege an oder ueberschreibt vorhandene.
+    scores["Anna"] = 1;
+    scores["Ben"] = 2;
+    scores["Clara"] = 1;
+    scores["Ben"] = 3;
+
+    for (const auto& entry : scores) {
+        std::cout << entry.first << ": Note " << entry.second << '\n';
+    }
+
+    auto score_it = scores.find("Clara");
+    if (score_it != scores.end()) {
+        std::cout << "Claras Note gefunden: " << score_it->second << '\n';
     }
 
     std::cout << "\n=== std::set ===\n";
-    std::set<int> uniqueNumbers = {3, 1, 3, 2, 2, 5};
-    for (int number : uniqueNumbers) {
-        std::cout << number << ' ';
+    std::set<std::string> tags = {"cpp", "git", "cpp", "algorithmen"};
+    for (const auto& tag : tags) {
+        std::cout << tag << ' ';
     }
     std::cout << '\n';
 
     std::cout << "\n=== std::unordered_map ===\n";
-    std::unordered_map<std::string, std::string> capitals;
-    capitals["Deutschland"] = "Berlin";
-    capitals["Frankreich"] = "Paris";
-    capitals["Italien"] = "Rom";
+    const std::vector<std::string> words = {"rot", "blau", "rot", "gruen", "rot", "blau"};
+    std::unordered_map<std::string, int> frequency;
 
-    std::cout << "Hauptstadt von Deutschland: " << capitals["Deutschland"] << '\n';
+    for (const auto& word : words) {
+        ++frequency[word];
+    }
+
+    for (const auto& entry : frequency) {
+        std::cout << entry.first << ": " << entry.second << '\n';
+    }
+
+    std::cout << "\n=== std::unordered_set ===\n";
+    std::unordered_set<int> seen_numbers = {4, 1, 4, 2, 9};
+
+    if (seen_numbers.find(2) != seen_numbers.end()) {
+        std::cout << "Die Zahl 2 ist im Set enthalten.\n";
+    }
+
+    std::cout << "Anzahl eindeutiger Werte: " << seen_numbers.size() << '\n';
     return 0;
 }

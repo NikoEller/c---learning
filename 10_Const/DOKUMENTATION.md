@@ -2,7 +2,8 @@
 
 ## Was bedeutet `const`?
 
-`const` bedeutet: Dieser Wert soll nach der Initialisierung nicht mehr veraendert werden.
+`const` bedeutet: Dieser Wert soll nach der Initialisierung nicht mehr
+veraendert werden.
 
 ```cpp
 const int maxValue = 100;
@@ -13,6 +14,7 @@ const int maxValue = 100;
 - verhindert ungewollte Aenderungen
 - macht Code klarer
 - zeigt Absicht sehr deutlich
+- hilft dem Compiler, fehlerhafte Aenderungen frueher zu erkennen
 
 ## Hauefige Einsatzorte
 
@@ -20,7 +22,15 @@ const int maxValue = 100;
 - Referenzen auf Werte, die nicht veraendert werden sollen
 - Methoden, die ein Objekt nicht aendern
 
-## Beispiel
+## `const` bei Variablen
+
+```cpp
+const double pi = 3.14159;
+```
+
+Das ist sinnvoll fuer Werte, die sich im Programm nicht aendern sollen.
+
+## `const` bei Referenzen
 
 ```cpp
 void printValue(const int& value) {
@@ -30,11 +40,29 @@ void printValue(const int& value) {
 
 Hier darf `value` in der Funktion nicht veraendert werden.
 
+Das ist besonders praktisch, wenn etwas nur gelesen werden soll.
+
+## `const` bei Methoden
+
+```cpp
+class Counter {
+public:
+    int get() const;
+};
+```
+
+Das `const` hinter der Methode bedeutet:
+
+- diese Methode soll das Objekt nicht veraendern
+
+Gerade bei Klassen ist das ein sehr wichtiger Teil sauberer Schnittstellen.
+
 ## Typische Fehler
 
 - `const` zu spaet oder gar nicht verwenden
 - denken, dass `const` nur "optional schoen" ist
+- vergessen, Lesefunktionen bei Klassen als `const` zu markieren
 
 ## Merksatz
 
-`const` macht Programme sicherer und lesbarer.
+`const` macht Programme sicherer, klarer und lesbarer.

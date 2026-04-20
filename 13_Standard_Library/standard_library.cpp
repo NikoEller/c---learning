@@ -1,3 +1,4 @@
+#include <algorithm>
 #include <array>
 #include <iostream>
 #include <string>
@@ -21,6 +22,13 @@ int main() {
 
     std::cout << "=== std::pair ===\n";
     std::cout << person.first << " ist " << person.second << " Jahre alt.\n";
+
+    std::cout << "\n=== std::sort aus der Standard Library ===\n";
+    std::sort(dynamic.begin(), dynamic.end());
+    for (int value : dynamic) {
+        std::cout << value << ' ';
+    }
+    std::cout << '\n';
 
     return 0;
 }
