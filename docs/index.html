@@ -19,44 +19,113 @@
   <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
+  <header class="site-header">
+    <div class="nav-shell">
+      <a class="brand" href="./index.html">
+        <span class="brand-mark">C++</span>
+        <span class="brand-text">Learning Repository</span>
+      </a>
+      <nav class="nav-links">
+        <a href="#roadmap">Roadmap</a>
+        <a href="#struktur">Struktur</a>
+        <a href="#zielgruppe">Zielgruppe</a>
+        <a href="../README.md">README</a>
+      </nav>
+    </div>
+  </header>
+
   <header class="hero">
     <div class="hero-inner">
-      <p class="eyebrow">Deutschsprachiges Lernprojekt</p>
-      <h1>C++ Learning Repository</h1>
-      <p class="lead">
-        Ein strukturierter Einstieg in C++ mit Erklaerungen, kommentierten Beispielen,
-        Uebungen und Loesungen.
-      </p>
-      <div class="hero-actions">
-        <a class="button primary" href="../README.md">Zum README</a>
-        <a class="button secondary" href="../Pointers">Pointer ansehen</a>
+      <div class="hero-copy">
+        <p class="eyebrow">Deutschsprachiges Lernprojekt</p>
+        <h1>C++ systematisch lernen statt nur Code sammeln</h1>
+        <p class="lead">
+          Ein strukturierter Einstieg in C++ mit ausfuehrlichen Erklaerungen,
+          kommentierten Beispielen, Uebungen und Loesungen.
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="../README.md">Zum README</a>
+          <a class="button secondary" href="../Pointers">Pointer ansehen</a>
+        </div>
       </div>
+
+      <aside class="hero-panel">
+        <p class="panel-label">Projektprofil</p>
+        <ul class="mini-list">
+          <li>17 Themenbereiche inklusive Pointer-Spezialteil</li>
+          <li>Dokumentation, Beispiele, Aufgaben und Loesungen</li>
+          <li>GitHub- und GitHub-Pages-optimierte Struktur</li>
+        </ul>
+      </aside>
     </div>
   </header>
 
   <main class="page">
+    <section class="stats-strip">
+      <article class="stat-card">
+        <strong>17</strong>
+        <span>Themenbereiche</span>
+      </article>
+      <article class="stat-card">
+        <strong>3 Ebenen</strong>
+        <span>Doku, Beispiel, Uebung</span>
+      </article>
+      <article class="stat-card">
+        <strong>Anfaengerfreundlich</strong>
+        <span>Klar geschrieben und strukturiert</span>
+      </article>
+      <article class="stat-card">
+        <strong>GitHub Pages</strong>
+        <span>Direkt als Projektseite nutzbar</span>
+      </article>
+    </section>
+
     <section class="section intro">
       <div class="section-heading">
         <p class="kicker">Warum dieses Projekt?</p>
-        <h2>Nicht nur Code, sondern ein echter Lernpfad</h2>
+        <h2>Nicht nur ein Repository, sondern ein echter Lernpfad</h2>
       </div>
       <div class="grid three">
         <article class="card">
           <h3>Verstaendlich aufgebaut</h3>
-          <p>Jedes Thema hat Dokumentation, Beispielcode, Aufgaben und Loesungen.</p>
+          <p>Jedes Thema ist in Dokumentation, Beispielcode, Aufgaben und Loesungen aufgeteilt.</p>
         </article>
         <article class="card">
-          <h3>Anfaengerfreundlich</h3>
-          <p>Die Inhalte sind bewusst so geschrieben, dass man sie ohne Vorwissen Schritt fuer Schritt durcharbeiten kann.</p>
+          <h3>Fokussiert auf Verstaendnis</h3>
+          <p>Die Inhalte sind so geschrieben, dass sie nicht nur Syntax zeigen, sondern Zusammenhaenge erklaeren.</p>
         </article>
         <article class="card">
-          <h3>Zum Wiederholen geeignet</h3>
-          <p>Das Projekt funktioniert nicht nur zum Lernen, sondern auch als spaeteres Nachschlagewerk.</p>
+          <h3>Langfristig nuetzlich</h3>
+          <p>Das Projekt eignet sich sowohl zum Einstieg als auch spaeter als persoenliches Nachschlagewerk.</p>
         </article>
       </div>
     </section>
 
-    <section class="section roadmap">
+    <section class="section path">
+      <div class="section-heading">
+        <p class="kicker">Empfohlener Einstieg</p>
+        <h2>So kannst du mit dem Projekt arbeiten</h2>
+      </div>
+      <div class="path-grid">
+        <article class="path-step">
+          <span>1</span>
+          <h3>Doku lesen</h3>
+          <p>Starte mit der `DOKUMENTATION.md`, um die Idee hinter dem Thema zu verstehen.</p>
+        </article>
+        <article class="path-step">
+          <span>2</span>
+          <h3>Beispiel ausfuehren</h3>
+          <p>Gehe die kommentierte `.cpp`-Datei durch und teste die Konzepte praktisch.</p>
+        </article>
+        <article class="path-step">
+          <span>3</span>
+          <h3>Uebungen loesen</h3>
+          <p>Bearbeite die Aufgaben zuerst selbst und vergleiche erst danach mit den Loesungen.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section roadmap" id="roadmap">
       <div class="section-heading">
         <p class="kicker">Roadmap</p>
         <h2>Die wichtigsten Themen im Projekt</h2>
@@ -102,30 +171,36 @@
           <strong>Klassen und Objekte</strong>
           <span>Ein Einstieg in OOP</span>
         </a>
-        <a class="topic-card" href="../Pointers">
+        <a class="topic-card featured" href="../Pointers">
           <span class="topic-number">SP</span>
           <strong>Pointers</strong>
-          <span>Ein besonders wichtiges C++-Thema</span>
+          <span>Ein zentrales Thema fuer Speicher, Adressen und Referenzierung</span>
         </a>
       </div>
     </section>
 
-    <section class="section structure">
+    <section class="section structure" id="struktur">
       <div class="section-heading">
         <p class="kicker">Struktur</p>
         <h2>So ist jedes Thema aufgebaut</h2>
       </div>
-      <div class="code-card">
+      <div class="structure-layout">
+        <div class="code-card">
 <pre><code>Themenordner/
 |- DOKUMENTATION.md
 |- beispiel.cpp
 `- uebungen/
    |- AUFGABEN.md
    `- LOESUNGEN.cpp</code></pre>
+        </div>
+        <div class="structure-copy">
+          <p>Die feste Struktur macht das Projekt leichter navigierbar und professioneller. Besucher wissen sofort, wo sie Theorie, Beispielcode und Uebungen finden.</p>
+          <p>Gerade fuer Lernprojekte ist diese Vorhersagbarkeit ein grosser Vorteil, weil sie Orientierung schafft und Vertrauen aufbaut.</p>
+        </div>
       </div>
     </section>
 
-    <section class="section audience">
+    <section class="section audience" id="zielgruppe">
       <div class="section-heading">
         <p class="kicker">Zielgruppe</p>
         <h2>Fuer wen dieses Repository gedacht ist</h2>
@@ -141,17 +216,28 @@
     <section class="section cta">
       <div class="cta-box">
         <p class="kicker">Naechster Schritt</p>
-        <h2>Dieses Projekt kann direkt als GitHub Pages Seite genutzt werden</h2>
+        <h2>Professionell praesentierbar auf GitHub und als Projektseite</h2>
         <p>
-          Aktiviere in den Repository-Einstellungen GitHub Pages und waehle den
-          <code>docs</code>-Ordner als Quelle.
+          Dieses Repository ist bereits fuer GitHub Pages, Social Preview und
+          eine suchbare, klare Projektpraesentation vorbereitet.
         </p>
-        <p>
-          Fuer bessere Sichtbarkeit enthaelt die Seite bereits Meta-Description,
-          Open-Graph-Tags und ein passendes Social-Preview-Asset.
-        </p>
+        <div class="cta-actions">
+          <a class="button primary" href="../REPO_METADATA.md">Repo-Metadaten</a>
+          <a class="button secondary" href="./SETUP.md">Pages-Setup</a>
+        </div>
       </div>
     </section>
   </main>
+
+  <footer class="site-footer">
+    <div class="footer-shell">
+      <p>C++ Learning Repository</p>
+      <div class="footer-links">
+        <a href="../README.md">README</a>
+        <a href="../REPO_METADATA.md">Metadata</a>
+        <a href="./social-preview.svg">Social Preview</a>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>

@@ -4,13 +4,24 @@ Ein strukturiertes, anfaengerfreundliches C++-Lernprojekt mit Erklaerungen, komm
 
 Dieses Repository hilft dir dabei, C++ nicht nur nachzuschreiben, sondern die Grundlagen wirklich zu verstehen. Statt einer losen Sammlung von Dateien bekommst du hier einen klaren Lernpfad mit Dokumentation, Beispielcode und passenden Uebungen.
 
-## Was dieses Repository besonders macht
+## Auf einen Blick
 
-- strukturierte Themenordner statt chaotischer Einzeldateien
-- ausfuehrliche Dokumentationen in jedem Themenbereich
-- kommentierte Beispielprogramme zum direkten Nachvollziehen
+- deutschsprachiges C++-Lernprojekt
+- klare Themenordner statt unstrukturierter Einzeldateien
+- ausfuehrliche Dokumentationen in jedem Bereich
+- kommentierte Beispielprogramme
 - Uebungen mit separaten Loesungen
-- deutschsprachige Erklaerungen mit Fokus auf Verstaendnis
+- vorbereitet fuer GitHub Pages und Social Preview
+
+## Warum dieses Repository professioneller wirkt als viele Lernsammlungen
+
+Viele Lern-Repositories sind inhaltlich brauchbar, wirken aber nach aussen unruhig oder ungeordnet. Dieses Projekt setzt bewusst auf:
+
+- konsistente Struktur in allen Themenordnern
+- klare Lernreihenfolge
+- einheitliche Dateibenennung
+- README, Pages und Social Preview fuer eine bessere Praesentation
+- Fokus auf echte Lernbarkeit statt auf reine Code-Menge
 
 ## Fuer wen dieses Projekt gedacht ist
 
@@ -77,6 +88,15 @@ Wenn du noch relativ am Anfang stehst, ist diese Reihenfolge sinnvoll:
 16. OOP Grundlagen
 17. Pointers
 
+## Schnellstart
+
+Wenn du das Projekt als Lernpfad nutzen willst:
+
+1. Lies zuerst die `DOKUMENTATION.md` eines Themas.
+2. Gehe danach die kommentierte Beispiel-`.cpp` durch.
+3. Loese anschliessend die Aufgaben selbst.
+4. Vergleiche erst danach mit `LOESUNGEN.cpp`.
+
 ## Beispiel fuer die Projektstruktur
 
 ```text
@@ -88,21 +108,9 @@ Wenn du noch relativ am Anfang stehst, ist diese Reihenfolge sinnvoll:
    `- LOESUNGEN.cpp
 ```
 
-## Warum das auch auf GitHub gut funktioniert
+## GitHub Pages und Repo-Praesentation
 
-Dieses Repository ist so aufgebaut, dass es nicht nur lokal angenehm ist, sondern auch auf GitHub stark wirkt:
-
-- klare Navigation durch nummerierte Themenordner
-- gute Lesbarkeit im README
-- eine eigene Projektseite ueber GitHub Pages
-- social-preview-faehige `docs`-Seite
-- gut passende Topics fuer GitHub-Suche
-
-## GitHub Pages
-
-Eine begleitende Projektseite findest du im Ordner [`docs`](./docs).
-
-Wenn du GitHub Pages aktivierst und als Quelle den `docs`-Ordner aus dem Branch `main` auswaehlst, kannst du daraus direkt eine oeffentliche Projektseite machen.
+Dieses Repository ist nicht nur fuer lokale Nutzung vorbereitet, sondern auch fuer eine gute oeffentliche Praesentation auf GitHub.
 
 Wichtige Dateien:
 
@@ -110,20 +118,18 @@ Wichtige Dateien:
 - [docs/styles.css](./docs/styles.css)
 - [docs/social-preview.svg](./docs/social-preview.svg)
 - [docs/SETUP.md](./docs/SETUP.md)
-
-## Repo-Description, Topics und Discoverability
-
-Die empfohlene GitHub-Repo-Beschreibung, Topic-Vorschlaege und Positionierung findest du in:
-
 - [REPO_METADATA.md](./REPO_METADATA.md)
 
-## Social Preview
+## Discoverability auf GitHub
 
-Ein passendes Social-Preview-Asset fuer GitHub und GitHub Pages liegt bereits hier:
+Fuer eine bessere Auffindbarkeit auf GitHub sind diese Punkte bereits vorbereitet:
 
-- [docs/social-preview.svg](./docs/social-preview.svg)
+- starke Repo-Beschreibung
+- passende Topic-Vorschlaege
+- GitHub-Pages-Seite
+- Social-Preview-Asset
 
-Das kannst du in GitHub unter `Settings -> General -> Social preview` hochladen.
+Die Empfehlungen dafuer findest du in [REPO_METADATA.md](./REPO_METADATA.md).
 
 ## Projektziel
 
