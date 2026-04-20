@@ -2,34 +2,65 @@
 
 ## Worum geht es?
 
-Mit `fstream` kann ein C++-Programm Dateien lesen und schreiben. Das ist wichtig, wenn Daten nicht nur waehrend der Programmlaufzeit existieren sollen.
+Programme arbeiten oft nicht nur mit Daten im Arbeitsspeicher, sondern muessen Informationen auch dauerhaft speichern oder spaeter wieder laden. Genau dafuer gibt es Dateistreams.
 
-## Wichtige Klassen
+Mit `fstream` kann ein C++-Programm:
 
-- `std::ifstream` zum Lesen
-- `std::ofstream` zum Schreiben
-- `std::fstream` fuer beides
+- Dateien schreiben
+- Dateien lesen
+- zeilenweise Inhalte verarbeiten
+- einfache Daten persistent speichern
 
-## Beispiel
+## Die wichtigsten Klassen
+
+- `std::ifstream` zum Lesen aus Dateien
+- `std::ofstream` zum Schreiben in Dateien
+- `std::fstream` fuer Lesen und Schreiben
+
+## Einfaches Schreibbeispiel
 
 ```cpp
-std::ofstream out("example.txt");
-out << "Hallo Datei!";
+std::ofstream outFile("notes.txt");
+outFile << "Erste Zeile\n";
+outFile << "Zweite Zeile\n";
 ```
+
+## Einfaches Lesebeispiel
+
+```cpp
+std::ifstream inFile("notes.txt");
+std::string line;
+
+while (std::getline(inFile, line)) {
+    std::cout << line << '\n';
+}
+```
+
+## Was ist wichtig zu verstehen?
+
+Ein Dateistream funktioniert aehnlich wie `std::cin` und `std::cout`, nur dass die Quelle oder das Ziel nicht die Konsole, sondern eine Datei ist.
 
 ## Typische Anwendungsfaelle
 
 - Konfigurationsdateien
-- Logs
 - gespeicherte Ergebnisse
-- kleine Datenbanken oder Textlisten
+- kleine Textdaten
+- Export und Import
+- Logs
 
-## Wichtige Punkte
+## Haeufige Fehler
 
-- immer pruefen, ob die Datei erfolgreich geoeffnet wurde
-- Dateien nach Benutzung schliessen, auch wenn das oft automatisch passiert
-- `std::getline` ist praktisch zum zeilenweisen Lesen
+- Datei wird nicht erfolgreich geoeffnet
+- Pfad ist falsch
+- Datei wird ueberschrieben, obwohl man nur anhaengen wollte
+- man vergisst, den Dateistatus zu pruefen
+
+## Gute Gewohnheiten
+
+- immer direkt pruefen, ob die Datei geoeffnet werden konnte
+- bei Textdateien oft `std::getline` benutzen
+- bei Ausgabedateien bewusst entscheiden: neu schreiben oder anhaengen
 
 ## Merksatz
 
-Mit Dateistreams kann dein Programm Daten dauerhaft speichern und spaeter wieder laden.
+Dateistreams machen aus fluechtigen Programmdaten dauerhafte Informationen.
