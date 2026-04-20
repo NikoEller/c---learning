@@ -62,6 +62,13 @@ Dadurch kannst du neue Themen schnell verstehen und spaeter gezielt wiederfinden
 15. [Fehlerquellen](./15_Fehlerquellen)
 16. [Ein- und Ausgabe](./16_Ein_und_Ausgabe)
 17. [OOP Grundlagen](./17_OOP_Grundlagen)
+18. [Dateien und Fstreams](./18_Dateien_und_Fstreams)
+19. [Fehlerbehandlung](./19_Fehlerbehandlung)
+20. [Templates](./20_Templates)
+21. [STL Algorithmen](./21_STL_Algorithmen)
+22. [Smart Pointer](./22_Smart_Pointer)
+23. [Threads und Nebenlaeufigkeit](./23_Threads_und_Nebenlaeufigkeit)
+24. [Netzwerkprogrammierung](./24_Netzwerkprogrammierung)
 
 ## Empfohlene Lernreihenfolge
 
@@ -84,6 +91,13 @@ Wenn du noch relativ am Anfang stehst, ist diese Reihenfolge sinnvoll:
 15. Fehlerquellen
 16. Ein- und Ausgabe
 17. OOP Grundlagen
+18. Dateien und Fstreams
+19. Fehlerbehandlung
+20. Templates
+21. STL Algorithmen
+22. Smart Pointer
+23. Threads und Nebenlaeufigkeit
+24. Netzwerkprogrammierung
 
 ## Schnellstart
 
