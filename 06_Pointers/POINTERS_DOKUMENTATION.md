@@ -549,7 +549,7 @@ Antwort: `p` zeigt auf kein gueltiges Objekt.
 
 ## 23. Bezug zu deiner Datei
 
-In [pointers.cpp](/Users/nikoeller/Documents/Programmieren/c++%20learning/Pointers/pointers.cpp) findest du ein direkt ausfuehrbares Beispiel zu:
+In [pointers.cpp](/Users/nikoeller/Documents/Programmieren/c++%20learning/06_Pointers/pointers.cpp) findest du ein direkt ausfuehrbares Beispiel zu:
 
 - Adresse und Wert
 - Dereferenzierung

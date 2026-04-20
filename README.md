@@ -50,21 +50,18 @@ Dadurch kannst du neue Themen schnell verstehen und spaeter gezielt wiederfinden
 3. [Kontrollstrukturen](./03_Kontrollstrukturen)
 4. [Funktionen](./04_Funktionen)
 5. [Referenzen](./05_Referenzen)
-6. [Arrays und Vector](./06_Arrays_und_Vector)
-7. [Strings](./07_Strings)
-8. [Klassen und Objekte](./08_Klassen_und_Objekte)
-9. [Const](./09_Const)
-10. [Speicher und Lebensdauer](./10_Speicher_und_Lebensdauer)
-11. [Header und Quelldateien](./11_Header_und_Quelldateien)
-12. [Standard Library](./12_Standard_Library)
-13. [Schleifen ueber Container](./13_Schleifen_ueber_Container)
-14. [Fehlerquellen](./14_Fehlerquellen)
-15. [Ein- und Ausgabe](./15_Ein_und_Ausgabe)
-16. [OOP Grundlagen](./16_OOP_Grundlagen)
-
-### Spezialthema
-
-- [Pointers](./Pointers)
+6. [Pointers](./06_Pointers)
+7. [Arrays und Vector](./07_Arrays_und_Vector)
+8. [Strings](./08_Strings)
+9. [Klassen und Objekte](./09_Klassen_und_Objekte)
+10. [Const](./10_Const)
+11. [Speicher und Lebensdauer](./11_Speicher_und_Lebensdauer)
+12. [Header und Quelldateien](./12_Header_und_Quelldateien)
+13. [Standard Library](./13_Standard_Library)
+14. [Schleifen ueber Container](./14_Schleifen_ueber_Container)
+15. [Fehlerquellen](./15_Fehlerquellen)
+16. [Ein- und Ausgabe](./16_Ein_und_Ausgabe)
+17. [OOP Grundlagen](./17_OOP_Grundlagen)
 
 ## Empfohlene Lernreihenfolge
 
@@ -75,18 +72,18 @@ Wenn du noch relativ am Anfang stehst, ist diese Reihenfolge sinnvoll:
 3. Kontrollstrukturen
 4. Funktionen
 5. Referenzen
-6. Arrays und Vector
-7. Strings
-8. Klassen und Objekte
-9. Const
-10. Speicher und Lebensdauer
-11. Header und Quelldateien
-12. Standard Library
-13. Schleifen ueber Container
-14. Fehlerquellen
-15. Ein- und Ausgabe
-16. OOP Grundlagen
-17. Pointers
+6. Pointers
+7. Arrays und Vector
+8. Strings
+9. Klassen und Objekte
+10. Const
+11. Speicher und Lebensdauer
+12. Header und Quelldateien
+13. Standard Library
+14. Schleifen ueber Container
+15. Fehlerquellen
+16. Ein- und Ausgabe
+17. OOP Grundlagen
 
 ## Schnellstart
 
