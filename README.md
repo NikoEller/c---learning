@@ -69,6 +69,7 @@ Dadurch kannst du neue Themen schnell verstehen und spaeter gezielt wiederfinden
 22. [Smart Pointer](./22_Smart_Pointer)
 23. [Threads und Nebenlaeufigkeit](./23_Threads_und_Nebenlaeufigkeit)
 24. [Netzwerkprogrammierung](./24_Netzwerkprogrammierung)
+25. [Unit Tests mit GoogleTest](./25_Unit_Tests_mit_GoogleTest)
 
 ## Empfohlene Lernreihenfolge
 
@@ -98,6 +99,7 @@ Wenn du noch relativ am Anfang stehst, ist diese Reihenfolge sinnvoll:
 22. Smart Pointer
 23. Threads und Nebenlaeufigkeit
 24. Netzwerkprogrammierung
+25. Unit Tests mit GoogleTest
 
 ## Schnellstart
 
