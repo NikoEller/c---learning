@@ -70,6 +70,16 @@ Dadurch kannst du neue Themen schnell verstehen und spaeter gezielt wiederfinden
 23. [Threads und Nebenlaeufigkeit](./23_Threads_und_Nebenlaeufigkeit)
 24. [Netzwerkprogrammierung](./24_Netzwerkprogrammierung)
 25. [Unit Tests mit GoogleTest](./25_Unit_Tests_mit_GoogleTest)
+26. [RAII und Ressourcenmanagement](./26_RAII_und_Ressourcenmanagement)
+27. [Copy, Move und Rule of 3/5](./27_Copy_Move_und_Rule_of_3_5)
+28. [Lambdas](./28_Lambdas)
+29. [Maps, Sets und Unordered Container](./29_Maps_Sets_und_Unordered_Container)
+30. [Iteratoren](./30_Iteratoren)
+31. [Vererbung und Polymorphismus tiefer](./31_Vererbung_und_Polymorphismus_tiefer)
+32. [Abstrakte Klassen und Interfaces](./32_Abstrakte_Klassen_und_Interfaces)
+33. [Move Semantics und std::move](./33_Move_Semantics_und_std_move)
+34. [Debugging mit VS Code](./34_Debugging_mit_VS_Code)
+35. [CMake tiefer](./35_CMake_tiefer)
 
 ## Empfohlene Lernreihenfolge
 
@@ -100,6 +110,16 @@ Wenn du noch relativ am Anfang stehst, ist diese Reihenfolge sinnvoll:
 23. Threads und Nebenlaeufigkeit
 24. Netzwerkprogrammierung
 25. Unit Tests mit GoogleTest
+26. RAII und Ressourcenmanagement
+27. Copy, Move und Rule of 3/5
+28. Lambdas
+29. Maps, Sets und Unordered Container
+30. Iteratoren
+31. Vererbung und Polymorphismus tiefer
+32. Abstrakte Klassen und Interfaces
+33. Move Semantics und std::move
+34. Debugging mit VS Code
+35. CMake tiefer
 
 ## Schnellstart
 
